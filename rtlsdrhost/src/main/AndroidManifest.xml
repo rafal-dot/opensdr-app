@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <permission
+        android:name="org.opensdr.radioapi.permission.BIND_AM_HOST"
+        android:description="@string/bind_permission_description"
+        android:label="@string/bind_permission_label"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="org.opensdr.radioapi.permission.BIND_AM_HOST" />
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/opensdr_am_host_icon"
+        android:label="OpenSDR Radio Host"
+        android:roundIcon="@mipmap/opensdr_am_host_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OpenSdrRadioHost">
+        <activity
+            android:name="org.opensdr.amhost.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/rtl_sdr_device_filter" />
+        </activity>
+
+        <service
+            android:name="org.opensdr.amhost.AmHostService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback"
+            android:permission="org.opensdr.radioapi.permission.BIND_AM_HOST">
+            <intent-filter>
+                <action android:name="org.opensdr.radioapi.action.BIND_AM_HOST" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

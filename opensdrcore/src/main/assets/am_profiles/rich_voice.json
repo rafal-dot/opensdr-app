@@ -1,0 +1,43 @@
+{
+  "id": "rich_voice",
+  "label": "Rich Voice",
+  "description": "Fuller airband voice profile with a bit more body and a less dry tone.",
+  "defaults": {
+    "preferredSampleRateHz": 240000,
+    "amBandwidthHz": 11000,
+    "audioBoostPercent": 135,
+    "voiceFocusEnabled": true,
+    "postLevelerEnabled": true,
+    "demodMode": 1,
+    "noiseBlankerEnabled": false,
+    "denoiseMode": 0,
+    "notchMode": 0,
+    "sidebandMode": 0,
+    "advancedSyncEnabled": false,
+    "qualitySquelchEnabled": false,
+    "speechEnhancerMode": 0
+  },
+  "pipeline": {
+    "dcAlpha": 0.0015,
+    "stage1FirTaps": 97,
+    "stage2FirTaps": 145,
+    "channelGuardHz": 850.0,
+    "channelCutoffRatio": 0.40,
+    "voiceAudioCutoffHz": 2550.0,
+    "naturalAudioCutoffHz": 3000.0,
+    "voiceAudioRatio": 0.29,
+    "naturalAudioRatio": 0.38,
+    "audioHighPassHz": 240.0,
+    "squelchAttackAlpha": 0.05,
+    "squelchReleaseAlpha": 0.002,
+    "squelchHysteresisPercent": 6.0,
+    "outputGain": 1.0,
+    "targetAudioLevel": 6800.0,
+    "softClipThreshold": 30200.0,
+    "softClipDrive": 8500.0,
+    "postLevelerTarget": 8600.0,
+    "postLevelerMaxGain": 1.7,
+    "postLevelerAttackAlpha": 0.009,
+    "postLevelerReleaseAlpha": 0.001
+  }
+}

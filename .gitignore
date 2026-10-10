@@ -1,0 +1,41 @@
+# Android Studio and local configuration
+.idea/
+*.iml
+*.iws
+*.ipr
+local.properties
+
+# Generated build output
+.gradle/
+.kotlin/
+build/
+release/
+out/
+.externalNativeBuild/
+.cxx/
+*.class
+*.apk
+*.ap_
+*.aab
+
+# Logs and generated packages
+*.log
+*.tar
+*.tar.gz
+dist/
+
+# Signing and secrets
+*.jks
+*.keystore
+keystore.properties
+*.pem
+*.p12
+*.key
+.env
+.env.*
+google-services.json
+firebaseAppDistributionServiceCredentialsFile.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+<resources>
+    <string name="bind_permission_label">Bind OpenSDR Radio Host</string>
+    <string name="bind_permission_description">Allows same-signed apps to control the local OpenSDR Radio Host receiver service.</string>
+</resources>

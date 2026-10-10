@@ -1,0 +1,43 @@
+{
+  "id": "weak_signal_sync",
+  "label": "Weak Signal Sync",
+  "description": "Synchronous detector with tighter filtering for weaker stations.",
+  "defaults": {
+    "preferredSampleRateHz": 240000,
+    "amBandwidthHz": 10000,
+    "audioBoostPercent": 200,
+    "voiceFocusEnabled": true,
+    "postLevelerEnabled": true,
+    "demodMode": 2,
+    "noiseBlankerEnabled": false,
+    "denoiseMode": 0,
+    "notchMode": 0,
+    "sidebandMode": 0,
+    "advancedSyncEnabled": false,
+    "qualitySquelchEnabled": false,
+    "speechEnhancerMode": 0
+  },
+  "pipeline": {
+    "dcAlpha": 0.0020,
+    "stage1FirTaps": 101,
+    "stage2FirTaps": 161,
+    "channelGuardHz": 700.0,
+    "channelCutoffRatio": 0.36,
+    "voiceAudioCutoffHz": 2200.0,
+    "naturalAudioCutoffHz": 2600.0,
+    "voiceAudioRatio": 0.27,
+    "naturalAudioRatio": 0.32,
+    "audioHighPassHz": 340.0,
+    "squelchAttackAlpha": 0.07,
+    "squelchReleaseAlpha": 0.003,
+    "squelchHysteresisPercent": 8.0,
+    "outputGain": 1.1,
+    "targetAudioLevel": 8500.0,
+    "softClipThreshold": 29000.0,
+    "softClipDrive": 7000.0,
+    "postLevelerTarget": 10000.0,
+    "postLevelerMaxGain": 2.2,
+    "postLevelerAttackAlpha": 0.015,
+    "postLevelerReleaseAlpha": 0.002
+  }
+}

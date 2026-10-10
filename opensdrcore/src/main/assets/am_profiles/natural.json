@@ -1,0 +1,35 @@
+{
+  "id": "natural",
+  "label": "Natural Wide",
+  "description": "Base minimal-DSP profile with wider AM audio and only conservative cleanup.",
+  "default": false,
+  "defaults": {
+    "preferredSampleRateHz": 240000,
+    "amBandwidthHz": 10000,
+    "audioBoostPercent": 100,
+    "voiceFocusEnabled": false,
+    "postLevelerEnabled": false,
+    "demodMode": 1,
+    "noiseBlankerEnabled": false,
+    "denoiseMode": 0,
+    "notchMode": 0,
+    "sidebandMode": 0,
+    "advancedSyncEnabled": false,
+    "qualitySquelchEnabled": false,
+    "speechEnhancerMode": 0
+  },
+  "pipeline": {
+    "stage1FirTaps": 89,
+    "stage2FirTaps": 137,
+    "channelGuardHz": 1100.0,
+    "channelCutoffRatio": 0.42,
+    "voiceAudioCutoffHz": 2500.0,
+    "naturalAudioCutoffHz": 3000.0,
+    "voiceAudioRatio": 0.32,
+    "naturalAudioRatio": 0.38,
+    "audioHighPassHz": 220.0,
+    "targetAudioLevel": 6200.0,
+    "softClipThreshold": 30500.0,
+    "softClipDrive": 9000.0
+  }
+}

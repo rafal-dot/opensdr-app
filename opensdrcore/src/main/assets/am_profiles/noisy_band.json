@@ -1,0 +1,43 @@
+{
+  "id": "noisy_band",
+  "label": "Noisy Band",
+  "description": "Aggressive voice cleanup for noisy channels with narrower AM sidebands.",
+  "defaults": {
+    "preferredSampleRateHz": 240000,
+    "amBandwidthHz": 8500,
+    "audioBoostPercent": 165,
+    "voiceFocusEnabled": true,
+    "postLevelerEnabled": true,
+    "demodMode": 1,
+    "noiseBlankerEnabled": false,
+    "denoiseMode": 0,
+    "notchMode": 0,
+    "sidebandMode": 0,
+    "advancedSyncEnabled": false,
+    "qualitySquelchEnabled": false,
+    "speechEnhancerMode": 0
+  },
+  "pipeline": {
+    "dcAlpha": 0.0018,
+    "stage1FirTaps": 113,
+    "stage2FirTaps": 177,
+    "channelGuardHz": 500.0,
+    "channelCutoffRatio": 0.32,
+    "voiceAudioCutoffHz": 2000.0,
+    "naturalAudioCutoffHz": 2400.0,
+    "voiceAudioRatio": 0.24,
+    "naturalAudioRatio": 0.30,
+    "audioHighPassHz": 420.0,
+    "squelchAttackAlpha": 0.09,
+    "squelchReleaseAlpha": 0.004,
+    "squelchHysteresisPercent": 10.0,
+    "outputGain": 1.0,
+    "targetAudioLevel": 7200.0,
+    "softClipThreshold": 28500.0,
+    "softClipDrive": 6500.0,
+    "postLevelerTarget": 9600.0,
+    "postLevelerMaxGain": 2.0,
+    "postLevelerAttackAlpha": 0.016,
+    "postLevelerReleaseAlpha": 0.002
+  }
+}
